@@ -1,20 +1,17 @@
-<!DOCTYPE html><html lang="he" dir="rtl"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>גבינות גורמה איכותיות למסעדות — מעדני עדנה</title>
-  <meta name="description" content="גלו את המגוון הרחב של מעדני עדנה - גבינות גורמה איכותיות למסעדות, נקניקים מעושנים ומעדני בשר. איפה לקנות נקניקים איכותיים? אצלנו במעדניית גבינות ונקניקים בישראל.">
-  <meta name="keywords" content="גבינות גורמה איכותיות למסעדות, איפה לקנות נקניקים איכותיים, מעדני עדנה, מעדניית גבינות ונקניקים בישראל">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-    <!-- Favicons -->
-    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
-    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
-    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
-    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
-<style>
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>הצהרת נגישות</title>
+    <meta name="description" content="הצהרת הנגישות שלנו - מחויבותנו לנגישות דיגיטלית">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">
+    <style>
 /* Zappy Attribution Header Styles */
 .zappy-header {
   position: static;
@@ -55,13 +52,7 @@
 .zappy-header .zappy-link:hover {
   opacity: 0.7;
 }</style>
-    <!-- Cookie Consent -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">
-    <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
-    <!-- Mickidum Accessibility Toolbar -->
-    <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
-
-          <style id="zappy-cta-mobile-style">
+    <style id="zappy-cta-mobile-style">
             /* Hide CTA list item on desktop (tablets and up) */
             @media (min-width: 769px) {
               .nav-cta-item-mobile {
@@ -75,8 +66,7 @@
               }
             }
           </style>
-        
-          <style id="zappy-nested-menu-style">
+    <style id="zappy-nested-menu-style">
             /* Desktop only: vertically center nav items */
             @media (min-width: 769px) {
               .nav-menu,
@@ -359,117 +349,86 @@
               }
             }
           </style>
-          
-          <script id="zappy-mobile-menu-script">
-            // Mobile menu toggle for nested submenus (including Menu Groups)
-            // Uses separate toggle button - link navigates, arrow toggles submenu
-            (function() {
-              function initMobileMenuToggles() {
-                // Only run on mobile
-                if (window.innerWidth > 768) {
-                  // Remove any toggle buttons on desktop
-                  document.querySelectorAll('.mobile-submenu-toggle').forEach(btn => btn.remove());
-                  document.querySelectorAll('.sub-menu.mobile-expanded').forEach(menu => {
-                    menu.classList.remove('mobile-expanded');
-                  });
-                  console.log('[MOBILE MENU] Desktop mode - cleanup done');
-                  return;
-                }
-                
-                console.log('[MOBILE MENU] Initializing mobile menu toggles...');
-                
-                // Find all parent menu items (items with .sub-menu)
-                const menuItemsWithSubmenus = document.querySelectorAll(
-                  '.nav-menu li:has(.sub-menu), nav li:has(.sub-menu), .navbar li:has(.sub-menu), #navMenu li:has(.sub-menu)'
-                );
-                
-                console.log('[MOBILE MENU] Found', menuItemsWithSubmenus.length, 'items with submenus');
-                
-                menuItemsWithSubmenus.forEach(function(li) {
-                  // Skip if already has toggle button
-                  if (li.querySelector('.mobile-submenu-toggle')) {
-                    return;
-                  }
-                  
-                  const submenu = li.querySelector('.sub-menu');
-                  const parentLink = li.querySelector(':scope > a') || li.querySelector(':scope > .menu-group-title');
-                  
-                  if (!submenu || !parentLink) return;
-                  
-                  // Create toggle button
-                  const toggleBtn = document.createElement('button');
-                  toggleBtn.className = 'mobile-submenu-toggle';
-                  toggleBtn.setAttribute('aria-label', 'Toggle submenu');
-                  toggleBtn.setAttribute('type', 'button');
-                  
-                  // Insert toggle button after the link
-                  parentLink.insertAdjacentElement('afterend', toggleBtn);
-                  
-                  console.log('[MOBILE MENU] Created toggle button for:', parentLink.textContent?.trim());
-                  
-                  // Handle toggle button click - only toggles submenu
-                  toggleBtn.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    const isExpanded = submenu.classList.contains('mobile-expanded');
-                    
-                    // Close all other submenus first
-                    document.querySelectorAll('.sub-menu.mobile-expanded').forEach(function(menu) {
-                      if (menu !== submenu) {
-                        menu.classList.remove('mobile-expanded');
-                        const otherToggle = menu.parentElement.querySelector('.mobile-submenu-toggle');
-                        if (otherToggle) otherToggle.classList.remove('expanded');
-                      }
-                    });
-                    
-                    // Toggle this submenu
-                    submenu.classList.toggle('mobile-expanded');
-                    toggleBtn.classList.toggle('expanded');
-                    
-                    console.log('[MOBILE MENU] Toggled submenu:', !isExpanded ? 'expanded' : 'collapsed');
-                  });
-                  
-                  // Parent link navigates normally - no preventDefault
-                });
-              }
-              
-              // Initialize on DOM load
-              if (document.readyState === 'loading') {
-                document.addEventListener('DOMContentLoaded', initMobileMenuToggles);
-              } else {
-                initMobileMenuToggles();
-              }
-              
-              // Re-initialize on window resize (but use debounce to avoid too many calls)
-              let resizeTimer;
-              window.addEventListener('resize', function() {
-                clearTimeout(resizeTimer);
-                resizeTimer = setTimeout(initMobileMenuToggles, 250);
-              });
-              
-              // Also initialize when mobile menu becomes visible
-              // This handles cases where the mobile menu is hidden initially
-              const observer = new MutationObserver(function(mutations) {
-                mutations.forEach(function(mutation) {
-                  if (mutation.type === 'attributes' && mutation.attributeName === 'class') {
-                    const target = mutation.target;
-                    if (target.classList.contains('active') || target.style.display !== 'none') {
-                      console.log('[MOBILE MENU] Mobile menu became visible, re-initializing...');
-                      setTimeout(initMobileMenuToggles, 100);
-                    }
-                  }
-                });
-              });
-              
-              // Observe mobile menu containers
-              const mobileMenus = document.querySelectorAll('.mobile-menu, .nav-menu, #navMenu');
-              mobileMenus.forEach(function(menu) {
-                observer.observe(menu, { attributes: true, attributeFilter: ['class', 'style'] });
-              });
-            })();
-          </script>
-        <!-- Zappy Analytics -->
+    <style>
+    
+/* Legal Pages Content Styles */
+.legal-page-content {
+  padding: 60px 0;
+  min-height: 60vh;
+}
+
+.legal-page-content .container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.legal-page-content h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+.legal-page-content .last-updated {
+  color: #666;
+  margin-bottom: 2rem;
+  font-style: italic;
+}
+
+.legal-page-content h2 {
+  font-size: 1.5rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: inherit;
+}
+
+.legal-page-content p {
+  margin-bottom: 1rem;
+  line-height: 1.7;
+}
+
+.legal-page-content ul {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+[dir="rtl"] .legal-page-content ul {
+  padding-left: 0;
+  padding-right: 1.5rem;
+}
+
+.legal-page-content li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.legal-page-content .contact-box {
+  background: rgba(0, 0, 0, 0.03);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1.5rem;
+}
+
+.legal-page-content .contact-box a {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.legal-page-content .contact-box a:hover {
+  opacity: 0.8;
+}
+
+    </style>
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="48x48" href="/assets/favicon-48x48.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/favicon-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="/assets/favicon-512x512.png">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+<!-- Zappy Analytics -->
 <script>
 (function() {
   'use strict';
@@ -671,15 +630,9 @@
 })();
 </script>
 <!-- End Zappy Analytics -->
-    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-
-<!-- Zappy Attribution Header -->
-<div id="zappy-attribution-header" class="zappy-header" style="display: none;">
-  <p>Happily created by&nbsp;<a href="https://zappy5.com" target="_blank" rel="noopener noreferrer" class="zappy-link">Zappy</a></p>
-</div>
-  <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar">
     <div class="container nav-container">
       <div class="nav-brand">
         <a href="/" class="logo-link">
@@ -711,140 +664,39 @@
       </div>
     </div>
   </nav>
+    <main>
+    
+<section class="legal-page-content accessibility-statement">
+  <div class="container">
+    <h1>הצהרת נגישות</h1>
+    <p class="last-updated"><strong>עדכון אחרון:</strong> 6.12.2025</p>
+    
+    <p>מעדני עדנה מחויבת להנגשת האתר לאנשים עם מוגבלויות. אנו שואפים לעמוד בדרישות תקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות), התשע"ג-2013.</p>
 
-  <section class="page-header">
-    <div class="container">
-      <h1>המוצרים המובחרים של מעדני עדנה</h1>
-      <h3>גבינות גורמה איכותיות למסעדות, נקניקים מעושנים ומעדני בשר ייחודיים</h3>
+    <h2>רמת הנגישות</h2>
+    <p>האתר עומד בדרישות WCAG 2.1 ברמת AA, כנדרש בחוק הישראלי.</p>
+
+    <h2>התאמות הנגישות באתר</h2>
+    <ul>
+      <li>תמיכה בקוראי מסך</li>
+      <li>ניווט באמצעות מקלדת</li>
+      <li>ניגודיות צבעים מתאימה</li>
+      <li>טקסט חלופי לתמונות</li>
+      <li>מבנה כותרות היררכי</li>
+    </ul>
+
+    <h2>דפדפנים נתמכים</h2>
+    <p>האתר תומך בדפדפנים הנפוצים בגרסאותיהם העדכניות: Chrome, Firefox, Safari, Edge.</p>
+
+    <h2>יצירת קשר</h2>
+    <div class="contact-box">
+      <p>נתקלתם בבעיית נגישות? נשמח לסייע:</p>
+      <p><strong>אימייל:</strong> <a href="mailto:info@company.com">info@company.com</a></p>
+      <p><strong>טלפון:</strong> <a href="tel:03-1234567">03-1234567</a></p>
     </div>
-  </section>
-
-  <section class="products-intro">
-    <div class="container">
-      <p>מעדני עדנה מתמחה במבחר רחב של מוצרים גורמה איכותיים שנבחרו בקפידה מיצרנים מובילים בארץ ובעולם. בין אם אתם מחפשים גבינות גורמה איכותיות למסעדות או תוהים איפה לקנות נקניקים איכותיים - תמצאו אצלנו את המענה המושלם. המומחיות שלנו והמחויבות לאיכות הופכים אותנו למעדניית גבינות ונקניקים בישראל המובילה.</p>
-    </div>
-  </section>
-
-  <section class="product-category">
-    <div class="container">
-      <h2>גבינות גורמה מובחרות</h2>
-      <p>מבחר עשיר של גבינות גורמה איכותיות למסעדות ולחובבי מזון. כל גבינה נבחרה בקפידה לטעמה הייחודי, המרקם המושלם והאיכות הגבוהה ביותר.</p>
-      <div class="products-grid">
-        <div class="product-item">
-          <div class="product-image">
-            <img data-placeholder="service-4" data-context="Aged French Brie cheese wheel with creamy texture on wooden cutting board, artisan presentation" src="/assets/service-service-4.webp" alt="גבינת ברי צרפתית מיושנת">
-          </div>
-          <div class="product-details">
-            <h3>גבינת ברי צרפתית</h3>
-            <p>גבינה רכה ועדינה עם טעם עשיר ומרקם קרמי. מיושנת בקפידה לפי שיטות מסורתיות צרפתיות, מושלמת למנות גורמה ולארוחות חגיגיות.</p>
-          </div>
-        </div>
-        
-        <div class="product-item">
-          <div class="product-image">
-            <img data-placeholder="service-5" data-context="Aged Parmesan cheese block with crystalline texture on rustic surface, professional food photography" src="/assets/service-service-5.webp" alt="פרמזן איטלקי מיושן">
-          </div>
-          <div class="product-details">
-            <h3>פרמזן איטלקי מיושן</h3>
-            <p>גבינה קשה מיושנת 24 חודשים עם טעם עמוק ומורכב. אידיאלית לגרידה על מנות פסטה, ריזוטו או כתוספת למנות גורמה במסעדות.</p>
-          </div>
-        </div>
-        
-        <div class="product-item">
-          <div class="product-image">
-            <img data-placeholder="service-6" data-context="Blue cheese wedge with distinctive veining on marble surface, gourmet presentation" src="/assets/service-service-6.webp" alt="גבינה כחולה איכותית">
-          </div>
-          <div class="product-details">
-            <h3>גבינה כחולה מובחרת</h3>
-            <p>גבינה כחולה איכותית עם טעם עז ומיוחד. מושלמת לסלטים, לצד פירות יבשים ואגוזים, או כחלק ממגש גבינות גורמה מרשים.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="product-category alt-bg">
-    <div class="container">
-      <h2>נקניקים מעושנים איכותיים</h2>
-      <p>איפה לקנות נקניקים איכותיים? במעדני עדנה תמצאו מגוון רחב של נקניקים מעושנים בשיטות מסורתיות. כל נקניק מוכן בקפידה רבה מחומרי גלם מובחרים.</p>
-      <div class="products-grid">
-        <div class="product-item">
-          <div class="product-image">
-            <img data-placeholder="service-7" data-context="Artisan beef sausages hanging in traditional smokehouse with wood smoke, rustic atmosphere" src="/assets/service-service-7.webp" alt="נקניקי בקר מעושנים">
-          </div>
-          <div class="product-details">
-            <h3>נקניקי בקר מעושנים</h3>
-            <p>נקניקי בקר איכותיים המעושנים בעץ אלון לטעם עשיר ומעודן. מתובלים בתבלינים נבחרים ומוכנים לפי מתכון מסורתי שעובר מדור לדור.</p>
-          </div>
-        </div>
-        
-        <div class="product-item">
-          <div class="product-image">
-            <img data-placeholder="service-8" data-context="Gourmet duck sausages with herbs on wooden board, premium charcuterie presentation" src="/assets/service-service-8.webp" alt="נקניקי ברווז גורמה">
-          </div>
-          <div class="product-details">
-            <h3>נקניקי ברווז גורמה</h3>
-            <p>נקניקי ברווז ייחודיים עם תוספת תבלינים ארומטיים. מוצר פרימיום המושלם למסעדות גורמה ולחובבי מזון המחפשים חוויות טעם חדשות.</p>
-          </div>
-        </div>
-        
-        <div class="product-item">
-          <div class="product-image">
-            <img data-placeholder="service-9" data-context="Traditional lamb sausages with Mediterranean spices on rustic platter, artisan quality" src="/assets/service-service-9.webp" alt="נקניקי כבש מתובלים">
-          </div>
-          <div class="product-details">
-            <h3>נקניקי כבש מתובלים</h3>
-            <p>נקניקי כבש עם תבלינים ים תיכוניים. טעם עשיר ואותנטי שמתאים במיוחד למנות מזרח תיכוניות ולצליות מיוחדות.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="product-category">
-    <div class="container">
-      <h2>מעדני בשר ודלקטסן</h2>
-      <p>מבחר מעדני בשר איכותיים כולל פרושוטו, סלמי ופטה. מוצרים אלו מושלמים למסעדות המחפשות להעשיר את התפריט שלהן ולחובבי מזון שמעריכים איכות.</p>
-      <div class="products-grid">
-        <div class="product-item">
-          <div class="product-image">
-            <img data-placeholder="service-10" data-context="Thinly sliced Italian prosciutto arranged artistically on white plate, premium deli presentation" src="/assets/service-service-10.webp" alt="פרושוטו איטלקי">
-          </div>
-          <div class="product-details">
-            <h3>פרושוטו איטלקי מיושן</h3>
-            <p>פרושוטו איטלקי אותנטי מיושן 18 חודשים. פרוס דק במיוחד לטעם עדין ומלא, מושלם כמנת פתיחה או כחלק ממגש מעדנים.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="quality-promise">
-    <div class="container">
-      <h2>ההבטחה שלנו לאיכות</h2>
-      <div class="promise-content">
-        <p>במעדני עדנה אנחנו מחויבים לספק רק את המוצרים האיכותיים ביותר. כל מוצר עובר בדיקה קפדנית ונבחר בקפידה מיצרנים מובילים. אנחנו עובדים רק עם ספקים שמקפידים על סטנדרטים גבוהים של איכות, טריות ובטיחות מזון.</p>
-        <p>המומחיות שלנו במעדניית גבינות ונקניקים בישראל מאפשרת לנו להציע ייעוץ מקצועי ולעזור לכם למצוא את המוצרים המושלמים לצרכים שלכם. בין אם אתם מחפשים גבינות גורמה איכותיות למסעדות או תוהים איפה לקנות נקניקים איכותיים - אנחנו כאן כדי לעזור.</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-content">
-        <h2>מעוניינים להזמין מוצרים?</h2>
-        <p>צרו איתנו קשר לקבלת ייעוץ מקצועי והזמנת מוצרים</p>
-        <a href="/contact" class="btn-cta">צור קשר</a>
-      </div>
-    </div>
-  </section>
-
-  <a href="https://wa.me/[whatsapp_handle]" target="_blank" class="whatsapp-float" aria-label="WhatsApp" rel="noopener noreferrer">
-    <i class="fab fa-whatsapp"></i>
-  </a>
-
-  
-    <!-- Legal Footer -->
+  </div>
+</section>
+    </main>
     <footer class="legal-footer">
       <div class="container">
         <div class="footer-main">
@@ -873,40 +725,6 @@
         </div>
       </div>
     </footer>
-
-
-<!-- Zappy Attribution Header Script -->
-<script>
-(function() {
-  var websiteId = 'f1cfea1c-5b7e-47d0-8cd8-18e7d4671144';
-  
-  // Don't show header in preview mode
-  var currentUrl = window.location.href;
-  var isPreview = currentUrl.includes('/preview/') || 
-                  currentUrl.includes('/preview-fullscreen/') || 
-                  currentUrl.includes('localhost:5001') ||
-                  currentUrl.includes('localhost:3000');
-  
-  if (isPreview) {
-    return; // Exit early in preview mode
-  }
-  
-  fetch('http://localhost:5001/api/website/' + websiteId + '/tier')
-    .then(function(response) { return response.json(); })
-    .then(function(data) {
-      if (data.showAttribution) {
-        var header = document.getElementById('zappy-attribution-header');
-        if (header) {
-          header.style.display = 'block';
-        }
-      }
-    })
-    .catch(function(error) {
-      console.error('Failed to check tier:', error);
-    });
-})();
-</script>
-    <div data-integration="accessibility:toolbar"></div>
 
     <script id="zappy-mobile-submenu-script">
     (function() {
@@ -943,4 +761,5 @@
     })();
     </script>
     <script src="/script.js"></script>
-</body></html>
+</body>
+</html>
