@@ -56,11 +56,70 @@
   opacity: 0.7;
 }</style>
     <!-- Cookie Consent -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
-<!-- Zappy Analytics -->
+<style>
+      /* Dropdown sub-menu styles (AI-generated page) */
+      .nav-menu li:has(.sub-menu),
+      nav li:has(.sub-menu),
+      .navbar li:has(.sub-menu) {
+        position: relative;
+      }
+      .nav-menu .sub-menu,
+      nav .sub-menu,
+      .navbar .sub-menu {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        padding: 8px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        list-style: none;
+        pointer-events: none;
+      }
+      .nav-menu li:hover > .sub-menu,
+      nav li:hover > .sub-menu,
+      .navbar li:hover > .sub-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      .sub-menu li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .sub-menu a {
+        display: block;
+        padding: 10px 16px;
+        color: #333;
+        font-weight: 500;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background-color 0.2s;
+      }
+      .sub-menu a:hover {
+        background-color: #f5f5f5;
+      }
+      /* RTL dropdown positioning */
+      [dir="rtl"] .sub-menu,
+      html[lang="he"] .sub-menu,
+      html[lang="ar"] .sub-menu {
+        left: auto;
+        right: 0;
+      }
+    </style><!-- Zappy Analytics -->
 <script>
 (function() {
   'use strict';
@@ -68,7 +127,7 @@
   // Configuration
   var config = {
     websiteId: 'f1cfea1c-5b7e-47d0-8cd8-18e7d4671144',
-    apiUrl: 'http://localhost:5001/api/analytics/track',
+    apiUrl: 'https://qaapi.zappy5.com/api/analytics/track',
     sessionDuration: 30 * 60 * 1000, // 30 minutes
     visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
     trackPageViews: true,
@@ -333,29 +392,29 @@
     <div class="container nav-container">
       <div class="nav-brand">
         <a href="/" class="logo-link">
-          <img src="/assets/logo.webp" alt="מעדני עדנה" class="logo" />
+          <img src="/assets/logo.webp" alt="מעדני עדנה" class="logo">
         </a>
       </div>
       
       <button class="mobile-toggle" id="mobileToggle" aria-label="פתח תפריט">
         <svg class="hamburger-icon" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+          <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
         <svg class="close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" style="display: none;">
-          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"></path>
+          <path d="M18 6L6 18M6 6l12 12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
         </svg>
       </button>
       
       <button class="phone-header-btn" aria-label="התקשר אלינו">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
         </svg>
       </button>
       
       <ul class="nav-menu" id="navMenu">
         <li><a href="/products">המוצרים שלנו</a></li>
-        <li><a href="/about">אודות</a></li>
-      </ul>
+        <li><a href="/about">אודות</a></li><li><a href="/about-us" class>אודות1</a></li>
+      <li><a href="/services" class="nav-link">שירותים</a><ul class="sub-menu"><li><a href="/services/catering-events" class="nav-link">קייטרינג ואירוח</a></li><li><a href="/services/business-supply" class="nav-link">עסקים ומסעדות</a></li><li><a href="/services/gift-baskets" class="nav-link">מארזי מתנה</a></li></ul></li><li><a href="/services-376730" class="nav-link">השירותים שלנו</a><ul class="sub-menu"><li><a href="/services/restaurants" class="nav-link">מסעדות ועסקים</a></li><li><a href="/services/events" class="nav-link">מגשי אירוח</a></li><li><a href="/services/gifts" class="nav-link">מארזי שי</a></li></ul></li></ul>
       
       <div class="nav-cta-container">
         <li class="nav-cta-item">
@@ -365,148 +424,17 @@
     </div>
   </nav>
 
-  <section class="hero">
-    <div class="hero-overlay"></div>
-    <img data-placeholder="hero-1" data-context="Wide panoramic shot of rustic delicatessen counter with artisan cheeses and cured meats displayed on wooden boards, warm ambient lighting, Mediterranean style" src="/assets/hero-hero-1.webp" alt="מעדני עדנה - מעדניית גבינות ונקניקים איכותית" class="hero-img">
-    <div class="hero-content">
-      <h1>גלו את עולם הטעמים במעדני עדנה</h1>
-      <h3>מעדניית גבינות ונקניקים בישראל המציעה מוצרים גורמה איכותיים לחובבי מזון ולמקצועני קולינריה</h3>
-      <a href="/products" class="btn-hero">גלו את המוצרים שלנו</a>
-    </div>
-  </section>
+  
 
-  <section class="intro-section">
-    <div class="container">
-      <h2>ברוכים הבאים למעדני עדנה</h2>
-      <div class="intro-content">
-        <p>מעדני עדנה היא יותר ממעדנייה - זו חוויה קולינרית שמחברת בין מסורת לחדשנות. אנחנו מתמחים במבחר מרהיב של גבינות גורמה איכותיות למסעדות ונקניקים מעושנים בקפידה, שנבחרו בקפידה מיצרנים מובילים בארץ ובעולם.</p>
-        <p>בין אם אתם חובבי מזון גורמה המחפשים חוויות טעם חדשות ומיוחדות, או מקצועני קולינריה שרוצים לשדרג את התפריט שלכם - תמצאו אצלנו מוצרים שיעלו על הציפיות. המומחיות שלנו בבחירת מוצרים איכותיים הופכת כל ביקור למסע קולינרי מרגש.</p>
-      </div>
-    </div>
-  </section>
+  
 
-  <section class="featured-products">
-    <div class="container">
-      <h2>המוצרים המובחרים שלנו</h2>
-      <div class="products-grid">
-        <div class="product-card">
-          <div class="product-image">
-            <img data-placeholder="service-1" data-context="Close-up of aged artisan cheese wheels with natural rind on rustic wooden board, soft natural lighting" src="/assets/service-service-1.webp" alt="גבינות גורמה איכותיות">
-          </div>
-          <div class="product-info">
-            <h3>גבינות גורמה מובחרות</h3>
-            <p>מבחר עשיר של גבינות איכותיות מיצרנים מובילים - מגבינות צרפתיות עדינות ועד גבינות איטלקיות מיושנות. כל גבינה נבחרה בקפידה לטעמה הייחודי ואיכותה הגבוהה.</p>
-          </div>
-        </div>
-        
-        <div class="product-card">
-          <div class="product-image">
-            <img data-placeholder="service-2" data-context="Artisan cured meats and salami hanging in traditional smokehouse, warm atmospheric lighting" src="/assets/service-service-2.webp" alt="נקניקים מעושנים איכותיים">
-          </div>
-          <div class="product-info">
-            <h3>נקניקים מעושנים בקפידה</h3>
-            <p>נקניקים איכותיים המעושנים בשיטות מסורתיות. איפה לקנות נקניקים איכותיים? אצלנו תמצאו מגוון רחב של נקניקי בקר, כבש וברווז, כולם מוכנים בקפידה רבה.</p>
-          </div>
-        </div>
-        
-        <div class="product-card">
-          <div class="product-image">
-            <img data-placeholder="service-3" data-context="Gourmet charcuterie board with prosciutto, salami, and pate arranged artistically on marble surface" src="/assets/service-service-3.webp" alt="מעדני בשר גורמה">
-          </div>
-          <div class="product-info">
-            <h3>מעדני בשר גורמה</h3>
-            <p>מבחר מעדני בשר מיוחדים כולל פרושוטו איטלקי, סלמי מתובל ופטה עשיר. מושלם למסעדות המחפשות להעשיר את התפריט שלהן במוצרים איכותיים.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
-  <section class="why-choose">
-    <div class="container">
-      <h2>למה לבחור במעדני עדנה?</h2>
-      <div class="reasons-grid">
-        <div class="reason-item">
-          <div class="reason-icon">
-            <i class="fas fa-award"></i>
-          </div>
-          <h3>איכות ללא פשרות</h3>
-          <p>אנחנו בוחרים רק את המוצרים האיכותיים ביותר מיצרנים מובילים בארץ ובעולם. כל מוצר עובר בדיקה קפדנית לפני שהוא מגיע אליכם.</p>
-        </div>
-        
-        <div class="reason-item">
-          <div class="reason-icon">
-            <i class="fas fa-leaf"></i>
-          </div>
-          <h3>חומרי גלם טבעיים</h3>
-          <p>מחויבות לשימוש בחומרי גלם טבעיים ואיכותיים בלבד. ללא תוספים מיותרים, רק טעם אותנטי וטבעי.</p>
-        </div>
-        
-        <div class="reason-item">
-          <div class="reason-icon">
-            <i class="fas fa-users"></i>
-          </div>
-          <h3>שירות אישי ומקצועי</h3>
-          <p>צוות מומחים שיעניק לכם ייעוץ מקצועי ויעזור לכם למצוא את המוצרים המושלמים לצרכים שלכם.</p>
-        </div>
-        
-        <div class="reason-item">
-          <div class="reason-icon">
-            <i class="fas fa-truck"></i>
-          </div>
-          <h3>אספקה מהירה</h3>
-          <p>שירות משלוחים מהיר ואמין לכל רחבי הארץ, עם שמירה על טמפרטורה אופטימלית לשמירת איכות המוצרים.</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
-  <section class="testimonials">
-    <div class="container">
-      <h2>מה הלקוחות שלנו אומרים</h2>
-      <div class="testimonials-grid">
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <p>"מעדני עדנה שינתה לגמרי את התפריט שלנו. הגבינות והנקניקים שאנחנו מקבלים מהם הם באיכות יוצאת דופן, והלקוחות שלנו תמיד מתלהבים מהטעם."</p>
-          </div>
-          <div class="testimonial-author">
-            <strong>שף דניאל כהן</strong>
-            <span>מסעדת הבשרים, תל אביב</span>
-          </div>
-        </div>
-        
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <p>"כחובבת מזון גורמה, אני תמיד מחפשת מוצרים איכותיים. מעדני עדנה מציעה מבחר מדהים של גבינות ונקניקים שלא תמצאו בשום מקום אחר. השירות האישי והמקצועי הוא פשוט מעולה."</p>
-          </div>
-          <div class="testimonial-author">
-            <strong>מיכל לוי</strong>
-            <span>חובבת מזון, ירושלים</span>
-          </div>
-        </div>
-        
-        <div class="testimonial-card">
-          <div class="testimonial-content">
-            <p>"המומחיות והידע של הצוות במעדני עדנה עוזרים לנו לבחור את המוצרים המושלמים לכל אירוע. האיכות תמיד עקבית והטעם פשוט מושלם."</p>
-          </div>
-          <div class="testimonial-author">
-            <strong>יוסי אברהם</strong>
-            <span>מנהל אירועים, חיפה</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  
 
-  <section class="cta-section">
-    <div class="container">
-      <div class="cta-content">
-        <h2>מוכנים לגלות את עולם הטעמים?</h2>
-        <p>בואו לבקר אותנו במעדניית גבינות ונקניקים בישראל או צרו איתנו קשר להזמנות ולייעוץ מקצועי</p>
-        <a href="/contact" class="btn-cta">צור קשר עכשיו</a>
-      </div>
-    </div>
-  </section>
+  
 
   <a href="https://wa.me/[whatsapp_handle]" target="_blank" class="whatsapp-float" aria-label="WhatsApp" rel="noopener noreferrer">
     <i class="fab fa-whatsapp"></i>

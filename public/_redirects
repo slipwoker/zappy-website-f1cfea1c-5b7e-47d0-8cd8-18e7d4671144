@@ -2,13 +2,17 @@
 # These rewrite rules show clean URLs to users while serving .html files
 
 /products  /products.html  200
-/translating...  /translating.html  200
 /about  /about.html  200
-/menu  /menu.html  200
 /contact  /contact.html  200
-/privacy  /privacy.html  200
-/accessibility  /accessibility.html  200
-/terms  /terms.html  200
+/about-us  /about-us.html  200
+/services  /services.html  200
+/services/catering-events  /services-catering-events.html  200
+/services/business-supply  /services-business-supply.html  200
+/services/gift-baskets  /services-gift-baskets.html  200
+/services-376730  /services-376730.html  200
+/services/restaurants  /services-restaurants.html  200
+/services/events  /services-events.html  200
+/services/gifts  /services-gifts.html  200
 
 # Legal pages - redirect old .html URLs to friendly URLs
 /privacy.html  /privacy  301

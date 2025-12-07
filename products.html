@@ -56,11 +56,70 @@
   opacity: 0.7;
 }</style>
     <!-- Cookie Consent -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.css">
     <script src="https://cdn.jsdelivr.net/npm/vanilla-cookieconsent@3/dist/cookieconsent.umd.js"></script>
     <!-- Mickidum Accessibility Toolbar -->
     <script src="https://cdn.jsdelivr.net/gh/mickidum/acc_toolbar/acctoolbar/acctoolbar.min.js"></script>
-<!-- Zappy Analytics -->
+<style>
+      /* Dropdown sub-menu styles (AI-generated page) */
+      .nav-menu li:has(.sub-menu),
+      nav li:has(.sub-menu),
+      .navbar li:has(.sub-menu) {
+        position: relative;
+      }
+      .nav-menu .sub-menu,
+      nav .sub-menu,
+      .navbar .sub-menu {
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        min-width: 220px;
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        padding: 8px 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(10px);
+        transition: all 0.3s ease;
+        z-index: 1000;
+        list-style: none;
+        pointer-events: none;
+      }
+      .nav-menu li:hover > .sub-menu,
+      nav li:hover > .sub-menu,
+      .navbar li:hover > .sub-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        pointer-events: auto;
+      }
+      .sub-menu li {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .sub-menu a {
+        display: block;
+        padding: 10px 16px;
+        color: #333;
+        font-weight: 500;
+        text-decoration: none;
+        white-space: nowrap;
+        transition: background-color 0.2s;
+      }
+      .sub-menu a:hover {
+        background-color: #f5f5f5;
+      }
+      /* RTL dropdown positioning */
+      [dir="rtl"] .sub-menu,
+      html[lang="he"] .sub-menu,
+      html[lang="ar"] .sub-menu {
+        left: auto;
+        right: 0;
+      }
+    </style><!-- Zappy Analytics -->
 <script>
 (function() {
   'use strict';
@@ -68,7 +127,7 @@
   // Configuration
   var config = {
     websiteId: 'f1cfea1c-5b7e-47d0-8cd8-18e7d4671144',
-    apiUrl: 'http://localhost:5001/api/analytics/track',
+    apiUrl: 'https://qaapi.zappy5.com/api/analytics/track',
     sessionDuration: 30 * 60 * 1000, // 30 minutes
     visitorDuration: 30 * 24 * 60 * 60 * 1000, // 30 days
     trackPageViews: true,
@@ -333,7 +392,7 @@
     <div class="container nav-container">
       <div class="nav-brand">
         <a href="/" class="logo-link">
-          <img src="/assets/logo.webp" alt="מעדני עדנה" class="logo" />
+          <img src="/assets/logo.webp" alt="מעדני עדנה" class="logo">
         </a>
       </div>
       
@@ -354,8 +413,8 @@
       
       <ul class="nav-menu" id="navMenu">
         <li><a href="/products">המוצרים שלנו</a></li>
-        <li><a href="/about">אודות</a></li>
-      </ul>
+        <li><a href="/about">אודות</a></li><li><a href="/about-us" class="">אודות1</a></li>
+      <li><a href="/services" class="nav-link">שירותים</a><ul class="sub-menu"><li><a href="/services/catering-events" class="nav-link">קייטרינג ואירוח</a></li><li><a href="/services/business-supply" class="nav-link">עסקים ומסעדות</a></li><li><a href="/services/gift-baskets" class="nav-link">מארזי מתנה</a></li></ul></li><li><a href="/services-376730" class="nav-link">השירותים שלנו</a><ul class="sub-menu"><li><a href="/services/restaurants" class="nav-link">מסעדות ועסקים</a></li><li><a href="/services/events" class="nav-link">מגשי אירוח</a></li><li><a href="/services/gifts" class="nav-link">מארזי שי</a></li></ul></li></ul>
       
       <div class="nav-cta-container">
         <li class="nav-cta-item">
